@@ -10,8 +10,8 @@
 </head>
 <body> 
     
-    <form>
-            <div class="container">
+    <form class="needs-validation" novalidate>
+        <div class="container">
                 <div class="header border">
                     <h2>Payment form example</h2>
                 </div>
@@ -19,16 +19,28 @@
                     <div class="alert"> 
                         <div class="alert alert-danger" role="alert">
                             <strong>Some fields are missing</strong>
-                          </div>
+                        </div>
                     </div>
                     <div class="row">
-                            <div class="col-5 ">
+                            <div class="col-5">
                                 <label for="card#" class="form-label"><strong>Card#</strong></label>
-                                <input type="text" class="form-control" id="card#" placeholder="XXXXXXXXXXXX">
+                                <input type="text" class="form-control" id="card#" placeholder="XXXXXXXXXXXX" required>
+                                <div class="valid-feedback">
+                                    Correct
+                                </div>
+                                <div class="invalid-feedback">
+                                    Wrong
+                                </div>
                             </div>
                             <div class="col-3">
                                 <label for="cvv" class="form-label"><strong>CVC#</strong></label>
-                                <input type="text" class="form-control" id="inputPassword4" placeholder="0000">
+                                <input type="text" class="form-control" id="inputPassword4" placeholder="0000" required>
+                                <div class="valid-feedback">
+                                    Correct
+                                </div>
+                                <div class="invalid-feedback">
+                                    Wrong
+                                </div>
                             </div>
                             <div class=" col-4"> 
                                 <label for="Amount" class="form-label">  <strong>Amount</strong></label>
@@ -38,27 +50,52 @@
                                                 <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
                                             </svg>
                                         </span>
-                                        <input type="number" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                        <input type="number" class="form-control" aria-label="Username" aria-describedby="basic-addon1" required>
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Correct
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Wrong
                                     </div>
                             </div>    
-
                     </div>        
                     
                     <div class="row">
                             <div class="col-6">
                                 <label for="inputname" class="form-label"><strong>First Name</strong></label>
-                                <input type="text" class="form-control" id="inputname">
-                            </div>
+                                <input type="text" class="form-control" id="inputname" required>
+                                <div class="valid-feedback">
+                                    Correct
+                                </div>
+                                <div class="invalid-feedback">
+                                    Wrong
+                                </div>
+                           </div>
+                            
                             <div class="col-md-6">
                                 <label for="inputLastname" class="form-label"><strong>Last Name</strong></label>
-                                <input type="text" class="form-control" id="inputLastname">
+                                <input type="text" class="form-control" id="inputLastname" required>
+                                <div class="valid-feedback">
+                                    Correct
+                                </div>
+                                <div class="invalid-feedback">
+                                    Wrong
+                                </div>
                             </div>
                     </div>
+                    
 
                     <div class="row">
                             <div class="col-md-6">
                                 <label for="inputCity" class="form-label"><strong>City</strong></label>
-                                <input type="text" class="form-control" id="inputCity">
+                                <input type="text" class="form-control" id="inputCity" required>
+                                <div class="valid-feedback">
+                                    Correct
+                                </div>
+                                <div class="invalid-feedback">
+                                    Wrong
+                                </div>
                             </div>
                             <div class="col-md-3">
                                 <label for="inputState" class="form-label"><strong>State</strong></label>
@@ -88,20 +125,31 @@
                                         <option value="Tres Cantos">Tres Cantos</option>
                                         <option value="Valdemoro">Valdemoro</option>
                                 </select>
+                                <div class="valid-feedback">
+                                    Correct
+                                </div>
+                                <div class="invalid-feedback">
+                                    Wrong
+                                </div>
                             </div>
                             <div class="col-md-3">
                                 <label for="inputpostal" class="form-label"><strong>Postal Code</strong></label>
-                                <input type="text" class="form-control" id="inputpostal">
+                                <input type="text" class="form-control" id="inputpostal" required>
+                                <div class="valid-feedback">
+                                    Correct
+                                </div>
+                                <div class="invalid-feedback">
+                                    Wrong
+                                </div>
                             </div>
                     </div>
 
                     <div class="row">
-
                             <div class="col-6">
                                 <p><strong>We Accept:</strong></p>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <button type="button" class="btn btn-secondary"> 
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required>
                                         <label class="form-check-label" for="inlineRadio1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-heading" viewBox="0 0 16 16">
                                                 <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
@@ -149,10 +197,8 @@
                                 </div>
                            </div>
                     </div>        
-
-
-
                 </div>
+
                 <div class="footer border" style="display: flex; justify-content: right ;" >
                         <div class="button pe-3" > 
                             <button type="reset" class="btn btn-secondary">Cancel</button>
@@ -161,11 +207,30 @@
             
                 </div>      
 
-            </div>
+        </div>        
+        
 
     </form>
-         
-
-  
+                <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (() => {
+                'use strict'
+                
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+                
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                
+                    form.classList.add('was-validated')
+                    }, false)
+                })
+                })()
+                </script>
 </body>
 </html>
